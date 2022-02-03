@@ -1,0 +1,2 @@
+#!/bin/bash
+cp --attributes-only .html /holberton-system_engineering-devops
