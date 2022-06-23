@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
-for FILE in *
+list=$(ls)
+for FILE in $list
 do 
     echo "$FILE"
 done
