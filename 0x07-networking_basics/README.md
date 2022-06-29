@@ -1,4 +1,4 @@
-<h2> class="gap">0x07. Networking basics #0</h2>
+<h2> Networking basics #0</h2>
 <h2>Learning Objectives</h2>
 <p>At the end of this project, you are expected to be able to&nbsp;<a title="explain to anyone" href="https://intranet.hbtn.io/rltoken/e6idBl4rpr11rjIPRtHEKw" target="_blank">explain to anyone</a>,&nbsp;<strong>without the help of Google</strong>:</p>
 <h3>I Model</h3>
