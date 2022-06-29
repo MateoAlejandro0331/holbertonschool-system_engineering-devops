@@ -1,1 +1,3 @@
+#!/usr/bin/env bash
+#TCP/UDP Questions
 netstat -pl
