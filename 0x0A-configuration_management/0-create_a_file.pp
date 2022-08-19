@@ -1,9 +1,10 @@
 # Using Puppet to create a file
 node default {
 file { '/tmp/school': #Path file
-  content => 'I love Puppet',
+  path    => '/tmp/school'
+  mode    => '0744',
   owner   => 'www-data',
   group   => 'www-data',
-  mode    => '0744',
-   }
+  content => 'I love Puppet',
+  }
 }
