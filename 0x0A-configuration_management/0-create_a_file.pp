@@ -2,7 +2,7 @@
 
 node default {
 file { '/tmp/school':
-  ensure  => present,
+  ensure  => 'present',
   owner   => 'www-data',
   group   => 'www-data',
   mode    => '0744',
