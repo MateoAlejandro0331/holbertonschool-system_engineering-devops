@@ -1,6 +1,12 @@
 # Using Puppet to install flask from pip3.
-exec { 'install python packages':
-  command => 'pip3 install flask flask_restful apiai',
+if ($need_to_install == undef) {
+  exec { 'install python packages':
+  command => 'pip3 install flask flask_restful apiai; touch /root/installed.txt',
   path    => ['/usr/bin/'],
-  unless  => '/usr/bin/test -f /usr/local/lib/python3.4/dist-packages/flask/app.py'
+  before  => Exec['create custom facter'],
+  }
+exec { 'create custom facter':
+  command  => "mkdir -p /etc/facter/facts.d; echo 'need_to_install=false' > /etc/facter/facts.d/check_pip_install.txt",
+  provider => shell,
+  }
 }
