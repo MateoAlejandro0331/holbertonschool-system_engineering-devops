@@ -1,5 +1,4 @@
 # Using Puppet to create a file
-node default {
 file { '/tmp/school': #Path file
   path    => '/tmp/school'
   mode    => '0744',
@@ -7,4 +6,3 @@ file { '/tmp/school': #Path file
   group   => 'www-data',
   content => 'I love Puppet',
   }
-}
