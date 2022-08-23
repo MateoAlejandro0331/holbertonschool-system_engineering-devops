@@ -43,7 +43,7 @@
 <h3>General</h3>
 <ul>
 <li>Allowed editors:&nbsp;<code>vi</code>,&nbsp;<code>vim</code>,&nbsp;<code>emacs</code></li>
-<li>All your files will be interpreted on Ubuntu 20.04 LTS and more</li>
+<li>All your files will be interpreted on Ubuntu 20.04 LTS</li>
 <li>All your files should end with a new line</li>
 <li>A&nbsp;<code>README.md</code>&nbsp;file, at the root of the folder of the project, is mandatory</li>
 <li>All your Bash script files must be executable</li>
