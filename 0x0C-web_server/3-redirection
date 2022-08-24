@@ -6,4 +6,4 @@ echo "Hello World" > index.html
 sudo mv index.html /var/www/html/
 redirection="rewrite ^/redirect_me$ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
 sudo sed -i "/# First attempt to serve request as file, then/ a\\$redirection" /etc/nginx/sites-available/default
-sudo service nginx reload
+sudo service nginx restart
