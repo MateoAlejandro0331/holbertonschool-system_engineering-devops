@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Add the subdomain www to your domain, point it to your lb-01 IP
+#Add the subdomain lb-01 to your domain, point it to your lb-01 IP
+#Add the subdomain web-01 to your domain, point it to your web-01 IP
+#Add the subdomain web-02 to your domain, point it to your web-02 IP
