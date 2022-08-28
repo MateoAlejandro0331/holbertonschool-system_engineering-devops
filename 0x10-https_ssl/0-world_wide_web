@@ -3,3 +3,17 @@
 #Add the subdomain lb-01 to your domain, point it to your lb-01 IP
 #Add the subdomain web-01 to your domain, point it to your web-01 IP
 #Add the subdomain web-02 to your domain, point it to your web-02 IP
+func () {
+  if [ $# -eq 1 ]
+    then
+      dig www."$1" | grep -A1 'ANSWER SECTION:' | awk '/IN/ { printf "The subdomain www is a %s record and points to %s\n", $4, $5 }'
+      dig lb-01."$1" | grep -A1 'ANSWER SECTION:' | awk '/IN/ { printf "The subdomain lb-01 is a %s record and points to %s\n", $4, $5 }'
+      dig web-01."$1" | grep -A1 'ANSWER SECTION:' | awk '/IN/ { printf "The subdomain web-01 is a %s record and points to %s\n", $4, $5 }'
+      dig web-02."$1" | grep -A1 'ANSWER SECTION:' | awk '/IN/ { printf "The subdomain web-02 is a %s record and points to %s\n", $4, $5 }'
+    elif [ $# -eq 2 ]
+      then
+      aux=$2
+      dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | awk -v variable="$aux" '/IN/ { printf "The subdomain %s is a %s record and points to %s\n", variable, $4, $5 }'
+    fi
+}
+func "$1" "$2"
