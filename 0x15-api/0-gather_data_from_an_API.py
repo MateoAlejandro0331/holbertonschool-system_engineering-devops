@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Request completed task for a user"""
+
 import json
 from urllib import request
 from sys import argv
