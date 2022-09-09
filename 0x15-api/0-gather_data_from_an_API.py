@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Request completed task for a user"""
 
-from sys import argv
 import json
+from sys import argv
 from urllib import request
 
 if __name__ == "__main__":
