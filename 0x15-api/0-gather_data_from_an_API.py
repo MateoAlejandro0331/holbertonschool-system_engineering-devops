@@ -2,8 +2,8 @@
 """Request completed task for a user"""
 
 import json
-from sys import argv
 import requests
+from sys import argv
 
 if __name__ == "__main__":
 
