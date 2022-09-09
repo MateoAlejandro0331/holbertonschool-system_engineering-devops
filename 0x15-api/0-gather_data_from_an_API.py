@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Request completed task for a user"""
 
+from sys import argv
 import json
 from urllib import request
-from sys import argv
 
 if __name__ == "__main__":
     todos = "https://jsonplaceholder.typicode.com/todos"
