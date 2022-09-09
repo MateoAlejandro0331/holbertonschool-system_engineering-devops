@@ -3,22 +3,18 @@
 
 import json
 from sys import argv
-from urllib import request
+import requests
 
 if __name__ == "__main__":
+
     todos = "https://jsonplaceholder.typicode.com/todos"
     user = "https://jsonplaceholder.typicode.com/users/{}".format(argv[1])
-    with request.urlopen(todos) as response:
-        total_task = 0
-        content = response.read()
-        content = content.decode('utf8').replace("'", '"')
-        data = json.loads(content)
-    with request.urlopen(user) as User:
-        content_user = User.read()
-        content_user = content_user.decode('utf8').replace("'", '"')
-        data_user = json.loads(content_user)
 
+    data = requests.get(todos).json()
+    data_user = requests.get(user).json()
+    total_task = 0
     task_completed = []
+
     for task in data:
         if task.get('userId') == int(argv[1]):
             total_task += 1
