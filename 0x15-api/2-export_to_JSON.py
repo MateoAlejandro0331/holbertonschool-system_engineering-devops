@@ -17,7 +17,7 @@ if __name__ == "__main__":
     dict_completed = {}
     task_completed = []
     for task in data:
-        if task.get('userId') == int(argv[1]):
+        if task['userId'] == int(argv[1]):
             task_format = {
                 'task': task['title'],
                 'completed': task['completed'],
