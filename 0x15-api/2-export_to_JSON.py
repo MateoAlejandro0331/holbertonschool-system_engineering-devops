@@ -9,11 +9,10 @@ from sys import argv
 if __name__ == "__main__":
 
     todos = "https://jsonplaceholder.typicode.com/todos"
-    user = "https://jsonplaceholder.typicode.com/users/{}".format(2)
+    user = "https://jsonplaceholder.typicode.com/users/{}".format(argv[1])
 
     data = requests.get(todos).json()
     data_user = requests.get(user).json()
-    total_task = 0
     dict_completed = {}
     task_completed = []
     for task in data:
