@@ -27,5 +27,5 @@ if __name__ == "__main__":
 
     dict_completed[argv[1]] = task_completed
     with open("{}.json".format(argv[1]), 'w',) as file:
-        json_string = json.dumps(task_completed)
+        json_string = json.dumps(dict_completed)
         file.write(json_string)
